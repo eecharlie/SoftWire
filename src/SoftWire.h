@@ -5,9 +5,11 @@
 
 #include <Arduino.h>
 #include <stdint.h>
+#include <Wire.h>
 #include <AsyncDelay.h>
 
-class SoftWire : public Stream {
+
+class SoftWire : public TwoWire {
 public:
 	enum result_t {
 		ack = 0,
